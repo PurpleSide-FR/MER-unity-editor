@@ -80,6 +80,7 @@ public class Schematic : SchematicBlock
                         { "Intensity", lightComponent.intensity },
                         { "Range", lightComponent.range },
                         { "Shadows", lightComponent.shadows != LightShadows.None },
+                        { "Static", lightComponent.gameObject.isStatic }
                     };
                 }
                 else // Empty transform
