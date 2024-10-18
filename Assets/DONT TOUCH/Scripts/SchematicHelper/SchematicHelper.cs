@@ -12,7 +12,6 @@ public class SchematicHelper : EditorWindow
     [MenuItem("MapEditorReborn Tools/Selection/Set Static")]
     private static void SetStaticSelected()
     {
-        EditorApplication.Beep();
         foreach (var go in Selection.gameObjects)
         {
             go.isStatic = true;
