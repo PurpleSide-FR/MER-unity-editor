@@ -74,11 +74,15 @@ public class Schematic : SchematicBlock
                 if (obj.TryGetComponent(out Light lightComponent))
                 {
                     block.BlockType = BlockType.Light;
+                    block.Rotation = obj.localEulerAngles;
                     block.Properties = new Dictionary<string, object>
                     {
                         { "Color", ColorUtility.ToHtmlStringRGBA(lightComponent.color) },
                         { "Intensity", lightComponent.intensity },
                         { "Range", lightComponent.range },
+                        { "Shape", lightComponent.shape },
+                        { "SpotAngle", lightComponent.spotAngle },
+                        { "InnerSpotAngle", lightComponent.innerSpotAngle },
                         { "Shadows", lightComponent.shadows != LightShadows.None },
                         { "Static", lightComponent.gameObject.isStatic }
                     };
