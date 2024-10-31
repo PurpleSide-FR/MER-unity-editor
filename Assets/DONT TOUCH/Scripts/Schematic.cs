@@ -83,6 +83,7 @@ public class Schematic : SchematicBlock
                         { "Shape", lightComponent.shape },
                         { "SpotAngle", lightComponent.spotAngle },
                         { "InnerSpotAngle", lightComponent.innerSpotAngle },
+                        { "ShadowStrength", lightComponent.shadowStrength },
                         { "Shadows", lightComponent.shadows != LightShadows.None },
                         { "Static", lightComponent.gameObject.isStatic }
                     };
